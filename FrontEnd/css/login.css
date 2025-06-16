@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+.fundo {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/FrontEnd/img/login_API_AluguelCarro.png);
+    background-size: cover;
+    background-position: center;
+    padding: 0 10%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.login {
+    text-align: center;
+}
+
+.login .formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.formulario input[type="email"],
+.formulario input[type="password"] {
+    border: none;
+    width: 350px;
+    height: 60px;
+    border-radius: 5px;
+    border: 2px solid #7C51A8;
+    background-color: #552681;
+    padding-left: 42px;
+}
+
+.inp-email,
+.inp-senha {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.inp-email .email,
+.inp-senha .senha {
+    position: absolute;
+    z-index: 1;
+}
+
+.inp-email .icon,
+.inp-senha .icon {
+    position: absolute;
+    z-index: 2;
+    padding-left: 15px;
+    pointer-events: none;
+}
+
+input::placeholder {
+    font-size: 16px;
+    color: #715383;
+}
+
+.inp-email .email:hover{
+    background-color: #552681;
+    padding-left: 42px;
+}
+
+.inp-senha .senha:hover {
+    background-color: #552681;
+    padding-left: 42px;
+}
+
+.formulario .lembrar {
+    display: flex;
+    gap: 5px;
+}
+
+.lembrar label{
+    color: #a7a7a7;
+    font-size: 12px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+.lembrar input[type="checkbox"] {
+    accent-color: #715383;
+}
+
+.entrar-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    background-color: #552681;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.entrar-btn a {
+    text-decoration: none;
+    color: #afafaf;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.entrar-btn:hover {
+    background-color: #4d2670;
+}
+
+@media (max-width: 1100px) {
+    .fundo {
+        padding: 0 5%;
+    }
+
+    .formulario input[type="email"],
+    .formulario input[type="password"] {
+        width: 300px;
+        height: 50px;
+    }
+    
+    .entrar-btn {
+        width: 150px;
+        height: 35px;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .fundo {
+        padding: 0 2%;
+    }
+}
+
+@media (max-width: 576px) {
+    .fundo {
+        background-size: cover;
+        background-position: 35%;
+        justify-content: center;
+    }   
+}

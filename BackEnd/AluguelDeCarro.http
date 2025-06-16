@@ -1,0 +1,6 @@
+@AluguelDeCarro_HostAddress = http://localhost:5279
+
+GET {{AluguelDeCarro_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
