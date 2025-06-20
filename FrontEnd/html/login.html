@@ -5,27 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="/FrontEnd/css/login.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="/FrontEnd/js/script.js" defer></script>
 </head>
 <body>
     <div class="fundo">
         <div class="login">
             <form class="formulario">
-                <div class="inp-email">
+                <div class="inp-user">
                     <i class="fas fa-envelope icon"></i>
-                    <input type="email" name="email" placeholder="E-mail">
+                    <input type="text" name="user" id="user" placeholder="Usuário">
                 </div>
 
                 <div class="inp-senha">
                     <i class="fas fa-lock icon"></i>
-                    <input type="password" name="senha" placeholder="Senha">
+                    <input type="password" name="senha" id="senha" placeholder="Senha">
                 </div>
                 
                 <div class="lembrar">
                     <input type="checkbox" name="lembrar_senha">
                     <label for="lembrar_senha">Lembrar Senha</label>
                 </div>
-
+                <p class="aviso">Usuário não encontrado</p>
                 <div class="entrar-btn"><a href="#">Entrar</a></div>
             </form>
         </div>
