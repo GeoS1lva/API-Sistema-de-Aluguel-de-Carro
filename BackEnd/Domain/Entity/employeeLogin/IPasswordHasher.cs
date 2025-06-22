@@ -1,6 +1,4 @@
-﻿using AluguelDeCarro.Domain.Entity;
-
-namespace AluguelDeCarro.Domain.Service
+﻿namespace AluguelDeCarro.Domain.Entity.employeeLogin
 {
     public interface IPasswordHasher
     {

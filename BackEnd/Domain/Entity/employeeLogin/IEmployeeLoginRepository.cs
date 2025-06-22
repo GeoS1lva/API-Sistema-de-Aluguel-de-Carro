@@ -1,6 +1,4 @@
-﻿using AluguelDeCarro.Domain.Entity;
-
-namespace AluguelDeCarro.Infrastructure.Login
+﻿namespace AluguelDeCarro.Domain.Entity.employeeLogin
 {
     public interface IEmployeeLoginRepository
     {

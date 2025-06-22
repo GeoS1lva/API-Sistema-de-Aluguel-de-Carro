@@ -1,5 +1,5 @@
 ﻿using System.Runtime.InteropServices;
-using AluguelDeCarro.Domain.Entity;
+using AluguelDeCarro.Domain.Entity.employeeLogin;
 using AluguelDeCarro.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 

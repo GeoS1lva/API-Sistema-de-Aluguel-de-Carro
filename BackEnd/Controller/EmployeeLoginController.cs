@@ -1,5 +1,5 @@
 ﻿using AluguelDeCarro.Application.RequestModel;
-using AluguelDeCarro.Application.UseCase;
+using AluguelDeCarro.Application.UseCase.EmployeeLoginUC;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AluguelDeCarro.Controller;

@@ -1,8 +1,7 @@
-﻿using AluguelDeCarro.Domain.Entity;
-using AluguelDeCarro.Domain.Service;
+﻿using AluguelDeCarro.Domain.Entity.employeeLogin;
 using System.Security.Cryptography;
 
-namespace AluguelDeCarro.Infrastructure.Security
+namespace AluguelDeCarro.Infrastructure.Login
 {
     public class PasswordHasher : IPasswordHasher
     {

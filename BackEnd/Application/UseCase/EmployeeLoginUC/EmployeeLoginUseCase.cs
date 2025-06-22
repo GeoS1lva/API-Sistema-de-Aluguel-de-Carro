@@ -2,11 +2,9 @@
 using System.Diagnostics;
 using AluguelDeCarro.Application.RequestModel;
 using AluguelDeCarro.Application.ResponseModel;
-using AluguelDeCarro.Domain.Entity;
-using AluguelDeCarro.Domain.Service;
-using AluguelDeCarro.Infrastructure.Login;
+using AluguelDeCarro.Domain.Entity.employeeLogin;
 
-namespace AluguelDeCarro.Application.UseCase
+namespace AluguelDeCarro.Application.UseCase.EmployeeLoginUC
 {
     public class EmployeeLoginUseCase(IEmployeeLoginRepository employeeLoginRepository, IPasswordHasher hasher) : IEmployeeLoginUseCase
     {
@@ -43,7 +41,7 @@ namespace AluguelDeCarro.Application.UseCase
             bool Result = hasher.ValidatePasswordInternal(employee, employee.Salt, request.Passwords);
 
             if (!Result)
-                return new ResultModel("Senha Incorreta");                                           
+                return new ResultModel("Senha Incorreta");
 
             return new ResultModel(Result);
         }
