@@ -5,7 +5,7 @@ namespace AluguelDeCarro.Domain.Entity.cars
 {
     public class CarsMapper
     {
-        public static Cars toDTO(RegisterCar registerCar)
+        public static Cars toDTORequst(RegisterCar registerCar)
         {
             return new Cars(registerCar.Make,
                 registerCar.Model,

@@ -2,6 +2,6 @@
 {
     public interface IValidatePlate
     {
-        public Task<bool> ValidatePlate(string licensePlate);
+        public Task<bool> CheckPlate(string licensePlate);
     }
 }

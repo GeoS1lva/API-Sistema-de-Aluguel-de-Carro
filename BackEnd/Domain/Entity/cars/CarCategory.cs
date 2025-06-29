@@ -3,7 +3,7 @@
     public enum CarCategory
     {
         hatchbak = 0,
-        seda = 1,
+        sedan = 1,
         suv = 2,
         crossover = 3,
         coupe = 4,

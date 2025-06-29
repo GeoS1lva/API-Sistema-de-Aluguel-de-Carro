@@ -29,6 +29,6 @@ public class EmployeeLoginController(IEmployeeLoginUseCase employeeLoginUseCase)
         if (result.Error)
             return BadRequest(result.ErrorMessage);
 
-        return Ok(result);
+        return Ok(result.Value);
     }
 }
