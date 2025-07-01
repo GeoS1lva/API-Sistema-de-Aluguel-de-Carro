@@ -2,8 +2,10 @@ using System.Text.Json.Serialization;
 using AluguelDeCarro.Application.UseCase.CarsUC;
 using AluguelDeCarro.Application.UseCase.EmployeeLoginUC;
 using AluguelDeCarro.Domain.Entity.cars;
+using AluguelDeCarro.Domain.Entity.client;
 using AluguelDeCarro.Domain.Entity.employeeLogin;
 using AluguelDeCarro.Domain.Repository;
+using AluguelDeCarro.Infrastructure.Client;
 using AluguelDeCarro.Infrastructure.Context;
 using AluguelDeCarro.Infrastructure.Login;
 using AluguelDeCarro.Infrastructure.VehicleCar;
@@ -22,6 +24,9 @@ builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 builder.Services.AddScoped<ICarsRepository, CarsRepository>();
 builder.Services.AddScoped<ICarsUseCase, CarsUseCase>();
 builder.Services.AddScoped<IValidatePlate, ValidatePlate>();
+builder.Services.AddScoped<ICepRepository, CepRepository>();
+builder.Services.AddScoped<ICustomersRepository, CustomersRepository>();
+builder.Services.AddScoped<ICustomerAddressRepository, CustomerAddressRepository>();
 
 builder.Services.AddCors(options =>
 {
