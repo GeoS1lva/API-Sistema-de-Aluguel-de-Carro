@@ -3,7 +3,7 @@
     public class Customers(string name, string cpf, DateOnly dateOfBirth, string email, string telephone, TypeOfPerson typeOfPerson) : EntityBase
     {
         public string Name { get; private set; } = name;
-        public string CPF { get; private set; } = cpf;
+        public string Cpf { get; private set; } = cpf;
         public DateOnly DateOfBirth { get; private set; } = dateOfBirth;
         public string Email { get; private set; } = email;
         public string Telephone { get; private set; } = telephone;

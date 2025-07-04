@@ -129,6 +129,40 @@
     grid-area: informacao;
 }
 
+.informacoes .cont{
+    height: 100%;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.cadastrar-cliente,
+.atualizar-cliente,
+.excluir-cliente,
+.filtrar-cliente{
+    background-color: #381c63;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icon-client{
+    color: #fff;
+    font-size: 35px;
+    margin-top: auto;
+}
+
+.desc-client{
+    margin-top: 50px;
+}
+
 .footer{
     background-color: #2c0f56;
     grid-area: footer;

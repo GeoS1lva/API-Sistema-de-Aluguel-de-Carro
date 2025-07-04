@@ -3,10 +3,11 @@ using System.Diagnostics;
 using AluguelDeCarro.Application.RequestModel;
 using AluguelDeCarro.Application.ResponseModel;
 using AluguelDeCarro.Domain.Entity.employeeLogin;
+using AluguelDeCarro.Infrastructure;
 
 namespace AluguelDeCarro.Application.UseCase.EmployeeLoginUC
 {
-    public class EmployeeLoginUseCase(IEmployeeLoginRepository employeeLoginRepository, IPasswordHasher hasher) : IEmployeeLoginUseCase
+    public class EmployeeLoginUseCase(IUnitOfWork unitOfWork, IPasswordHasher hasher) : IEmployeeLoginUseCase
     {
 
         public async Task<ResultModel> CreateUser(RequestEmployeeLogin request)
@@ -23,8 +24,8 @@ namespace AluguelDeCarro.Application.UseCase.EmployeeLoginUC
 
             EmployeeLogin employee = new EmployeeLogin(request.UserName, hashPassword, salt);
 
-            employeeLoginRepository.AddUser(employee);
-            await employeeLoginRepository.SaveChangesAsync();
+            unitOfWork.EmployeeLoginRepository.AddUser(employee);
+            await unitOfWork.SaveChangesAsync();
 
             ResponseCreateUser responseCreateUser = new ResponseCreateUser(employee.User);
 
@@ -33,7 +34,7 @@ namespace AluguelDeCarro.Application.UseCase.EmployeeLoginUC
 
         public async Task<ResultModel> RequestEmployeeLogin(RequestEmployeeLogin request)
         {
-            EmployeeLogin employee = await employeeLoginRepository.ReceiveUser(request.UserName);
+            EmployeeLogin employee = await unitOfWork.EmployeeLoginRepository.ReceiveUser(request.UserName);
 
             if (employee == null)
                 return new ResultModel("Usuário não encontrado");

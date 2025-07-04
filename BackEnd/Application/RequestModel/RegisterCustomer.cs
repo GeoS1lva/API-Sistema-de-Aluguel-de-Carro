@@ -12,7 +12,6 @@ namespace AluguelDeCarro.Application.RequestModel
         public TypeOfPerson TypeOfPerson { get; set; }
         public string NumberAddress { get; set; }
         public AddressType addressType { get; set; }
-        public int CustomerId { get; set; }
 
         public AddressModel addressModel { get; set; }
     }

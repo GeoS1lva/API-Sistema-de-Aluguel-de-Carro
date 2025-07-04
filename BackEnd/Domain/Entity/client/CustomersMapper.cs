@@ -16,7 +16,7 @@ namespace AluguelDeCarro.Domain.Entity.client
             );
         }
 
-        public static CustomerAddress CustomerAddressToDTO(RegisterCustomer registerCustomer)
+        public static CustomerAddress CustomerAddressToDTO(RegisterCustomer registerCustomer, int CustomerId)
         {
             return new CustomerAddress(
                 registerCustomer.addressModel.cep,
@@ -26,7 +26,7 @@ namespace AluguelDeCarro.Domain.Entity.client
                 registerCustomer.addressModel.localidade,
                 registerCustomer.addressModel.uf,
                 registerCustomer.addressType,
-                registerCustomer.CustomerId
+                CustomerId
             );
         }
     }

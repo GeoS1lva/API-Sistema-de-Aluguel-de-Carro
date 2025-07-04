@@ -2,14 +2,14 @@
 
 namespace AluguelDeCarro.Infrastructure.VehicleCar
 {
-    public class ValidatePlate(ICarsRepository carsRepository) : IValidatePlate
+    public class ValidatePlate(IUnitOfWork unitOfWork) : IValidatePlate
     {
         public async Task<bool> CheckPlate(string licensePlate)
         {
             if (licensePlate.Length != 7)
                 return false;
 
-            if(await carsRepository.CheckByLicensePlate(licensePlate))
+            if(await unitOfWork.CarsRepository.CheckByLicensePlate(licensePlate))
                 return false;
 
             char[] plate = licensePlate.ToCharArray();

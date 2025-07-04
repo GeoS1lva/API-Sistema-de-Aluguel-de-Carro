@@ -12,6 +12,6 @@ namespace AluguelDeCarro.Infrastructure.Client
             => _context.customers.Add(customers);
 
         public async Task<bool> CheckByCPF(string cpf)
-            => await _context.customers.AnyAsync(x => x.CPF == cpf);
+            => await _context.customers.AnyAsync(x => x.Cpf == cpf);
     }
 }

@@ -1,10 +1,12 @@
 using System.Text.Json.Serialization;
 using AluguelDeCarro.Application.UseCase.CarsUC;
+using AluguelDeCarro.Application.UseCase.ClientUC;
 using AluguelDeCarro.Application.UseCase.EmployeeLoginUC;
 using AluguelDeCarro.Domain.Entity.cars;
 using AluguelDeCarro.Domain.Entity.client;
 using AluguelDeCarro.Domain.Entity.employeeLogin;
 using AluguelDeCarro.Domain.Repository;
+using AluguelDeCarro.Infrastructure;
 using AluguelDeCarro.Infrastructure.Client;
 using AluguelDeCarro.Infrastructure.Context;
 using AluguelDeCarro.Infrastructure.Login;
@@ -18,15 +20,15 @@ builder.Services.AddScoped<SqlServerDbContext>();
 builder.Services.AddDbContext<SqlServerDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoSql")));
 
-builder.Services.AddScoped<IEmployeeLoginRepository, EmployeeLoginRepository>();
+
 builder.Services.AddScoped<IEmployeeLoginUseCase, EmployeeLoginUseCase>();
-builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
-builder.Services.AddScoped<ICarsRepository, CarsRepository>();
 builder.Services.AddScoped<ICarsUseCase, CarsUseCase>();
+builder.Services.AddScoped<ICustumerUseCase, CustumerUseCase>();
+builder.Services.AddScoped<ICustumerAddressUseCase, CustumerAddressUseCase>();
+
+builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 builder.Services.AddScoped<IValidatePlate, ValidatePlate>();
-builder.Services.AddScoped<ICepRepository, CepRepository>();
-builder.Services.AddScoped<ICustomersRepository, CustomersRepository>();
-builder.Services.AddScoped<ICustomerAddressRepository, CustomerAddressRepository>();
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddCors(options =>
 {
