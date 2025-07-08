@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoLocus</title>
-    <link rel="stylesheet" href="/FrontEnd/css/navegação/clientes.css">
+    <link rel="stylesheet" href="/FrontEnd/css/navegação/opc-clientes/cadastrar-cliente.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="/FrontEnd/js/navegação/clientes.js" defer></script>
 </head>
@@ -71,9 +71,47 @@
                     <i class="fa-solid fa-filter icon-client"></i>
                     <div class="desc-client"><p>Filtrar Cliente</p></div>
                 </div>
-
-
             </nav>
+            <div class="form-cadastro">
+                <form class="dados-cliente">
+                    <div class="input-dados">
+                        <h2>Dados Clinte</h2>
+                        <div class="lin-1">
+                            <input type="text" name="nome" class="nome" placeholder="Nome Completo">
+                            <select name="tipo-pessoa" class="tipo-pessoa" aria-placeholder="Tipo Pessoa">
+                                <option disabled selected>Tipo de Pessoa</option>
+                                <option value="fisica">Física</option>
+                                <option value="juridica">Jurídica</option>
+                            </select>
+                            <input type="text" name="cpf" class="cpf-cnpj" placeholder="CPF/CNPJ">
+                            <input type="date" name="data-nascimento" class="data-nascimento" placeholder="Dt.Nascimento">
+                        </div>
+                        <div class="lin-2">
+                            <input type="email" name="email" class="email" placeholder="E-mail">
+                            <input type="text" name="celular" class="celular" placeholder="Celular">
+                        </div>
+                    </div>
+                    <div class="input-endereco">
+                        <h2>Endereço Cliente</h2>
+                        <div class="lin-1">
+                            <input type="text" name="cep" class="cep" placeholder="CEP">
+                            <input type="text" name="rua" class="rua" placeholder="Rua">
+                            <input type="text" name="bairro" class="bairro" placeholder="Bairro">
+                            <input type="text" name="numero" class="numero" placeholder="Numero">
+                        </div>
+                        <div class="lin-2">
+                            <input type="text" name="cidade" class="cidade" placeholder="Cidade">
+                            <input type="text" name="estado" class="estado" placeholder="Estado">
+                            <select name="tipo-endereco" class="tipo-endereco" aria-placeholder="Tipo Endereço">
+                                <option disabled selected>Tipo de Endereço</option>
+                                <option value="residencial">Residencial</option>
+                                <option value="comercial">Comercial</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
         </div>
 
         <footer class="footer">

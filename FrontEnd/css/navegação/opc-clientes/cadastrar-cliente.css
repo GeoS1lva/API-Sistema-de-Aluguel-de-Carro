@@ -127,6 +127,8 @@
 .informacoes{
     background-color: #230949;
     grid-area: informacao;
+    display: flex;
+    flex-direction: column;
 }
 
 .informacoes .cont{
@@ -179,6 +181,92 @@
 
 .filtrar-cliente:hover{
     background-color: #2e1752;
+}
+
+.form-cadastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+}
+
+.dados-cliente{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.input-dados h2,
+.input-endereco h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #4e2f79;
+}
+
+.lin-1{
+    border-top: 3px solid #4e2f79;
+    padding-top: 1rem;
+}
+
+.lin-1,
+.lin-2{
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+input[type="text"]{
+    background-color: #462f67;
+    border-radius: 10px;
+    width: 350px;
+    height: 50px;
+}
+
+input[type="date"]{
+    background-color: #462f67;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    color: #fff;
+}
+
+input[type="email"]{
+    background-color: #462f67;
+    border-radius: 10px;
+    width: 350px;
+    height: 50px;
+}
+
+input::placeholder{
+    color: #fff;
+    padding-left: 10px;
+}
+
+input{
+    border: none;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #523780;
+}
+
+input:focus::placeholder{
+    color: #777777;
+}
+
+.tipo-pessoa,
+.tipo-endereco{
+    background-color: #462f67;
+    border: none;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    color: #fff;
+}
+
+option {
+  background-color: #462f67;
+  color: #fff;
 }
 
 .footer{
